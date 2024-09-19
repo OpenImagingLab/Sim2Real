@@ -1,3 +1,4 @@
+
 # From Sim-to-Real: Toward General Event-based Low-Light Frame Interpolation with Per-scene Optimization
 
 [Ziran Zhang](https://naturezhanghn.github.io)<sup>1,2</sup>, 
@@ -8,22 +9,17 @@ Feng Zhang<sup>2</sup>,
 [Tianfan Xue](https://tianfan.info)<sup>3</sup>, 
 [Shi Guo](https://guoshi28.github.io)<sup>2</sup>
 
-
 <sup>1</sup> Zhejiang University, <sup>2</sup> Shanghai AI Laboratory, <sup>3</sup> The Chinese University of Hong Kong
-
 
 [Project Page](https://openimaginglab.github.io/Sim2Real/) | [Video](https://www.youtube.com/watch?v=PiYEh_zcG88) | [Paper](https://arxiv.org/pdf/2406.08090) | [Data](https://opendatalab.com/ziranzhang/EVFI-LL) | [Weights](https://drive.google.com/drive/folders/1sugfKHUswxqUNQKit1G5W8dF1rAKijxq?usp=drive_link)
 
----
 
 ## Overview
 
-This repository contains the official implementation of **"From Sim-to-Real: Toward General Event-based Low-Light Frame Interpolation with Per-scene Optimization"**, presented at **SIGGRAPH Asia 2024**.  
-Our approach utilizes **event cameras** and focuses on enhancing **Video Frame Interpolation (VFI)** under challenging **low-light conditions**. The core of our method is a **per-scene optimization** strategy that adapts to specific lighting and camera settings, addressing the common issues of trailing artifacts and signal degradation seen in low-light scenarios.
+This repository hosts the implementation of **"From Sim-to-Real: Toward General Event-based Low-Light Frame Interpolation with Per-scene Optimization"** (SIGGRAPH Asia 2024). Our approach leverages **event cameras** and enhances **Video Frame Interpolation (VFI)** in **low-light conditions** via a **per-scene optimization** strategy. This method adapts the model to specific lighting and camera settings, solving issues like trailing artifacts and signal degradation common in low-light environments.
 
 ![Visual Comparison](Sim2Real_code/image.png)
 
----
 
 ## 🔑 Key Features
 
