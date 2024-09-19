@@ -1,4 +1,12 @@
-## Brief introduction
+## From Sim-to-Real: Toward General Event-based Low-Light Frame Interpolation with Per-scene Optimization
+Ziran Zhang, Zhejiang University and Shanghai AI Laboratory
+Yongrui Ma, The Chinese University of Hong Kong and Shanghai AI Laboratory
+Yueting Chen, Zhejiang University
+Feng Zhang, Shanghai AI Laboratory
+Jinwei Gu, The Chinese University of Hong Kong
+Tianfan Xue, The Chinese University of Hong Kong
+Shi Guo, Shanghai AI Laboratory
+
 [Project Page](https://openimaginglab.github.io/Sim2Real/) | [Video](https://www.youtube.com/watch?v=PiYEh_zcG88) | [Paper](https://arxiv.org/pdf/2406.08090) | [Data](https://opendatalab.com/ziranzhang/EVFI-LL) | [Weight](https://drive.google.com/drive/folders/1sugfKHUswxqUNQKit1G5W8dF1rAKijxq?usp=drive_link)
 
 This repository contains the official implementation of **"From Sim to Real: Toward General Event-based Low-Light Frame Interpolation with Per-scene Optimization"**, presented at **SIGGRAPH Asia 2024**.
