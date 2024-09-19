@@ -87,3 +87,5 @@ If you find this work useful in your research, please cite:
   year={2024}
 }
 ```
+## Acknowledgement
+This project is based on [TimeLens-XL](https://github.com/OpenImagingLab/TimeLens-XL), we thank the original authors for their excellent work.
