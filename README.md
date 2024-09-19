@@ -1,5 +1,5 @@
 ## Brief introduction
-[Project Page](https://openimaginglab.github.io/Sim2Real/) | Video | [Paper](https://arxiv.org/pdf/2406.08090) | Data | [Weight](https://drive.google.com/drive/folders/1sugfKHUswxqUNQKit1G5W8dF1rAKijxq?usp=drive_link)
+[Project Page](https://openimaginglab.github.io/Sim2Real/) | [Video](https://www.youtube.com/watch?v=PiYEh_zcG88) | [Paper](https://arxiv.org/pdf/2406.08090) | Data | [Weight](https://drive.google.com/drive/folders/1sugfKHUswxqUNQKit1G5W8dF1rAKijxq?usp=drive_link)
 
 This repository contains the official implementation of **"From Sim to Real: Toward General Event-based Low-Light Frame Interpolation with Per-scene Optimization"**, presented at **SIGGRAPH Asia 2024**.
 
