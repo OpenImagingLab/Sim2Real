@@ -73,7 +73,7 @@ The **EVFI-LL** dataset consists of RGB+Event sequences captured in low-light co
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />The website content used in this project is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 
 ### Code License
-The code in this repository is licensed under the MIT License. See `LICENSE` for more details.
+The code in this repository is licensed under the MIT License. 
 
 ## Citation
 
