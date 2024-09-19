@@ -1,4 +1,4 @@
-# Sim2Real: Per-Scene Optimization for Event-based Low-Light Frame Interpolation
+Project Page | Video | [Paper](https://arxiv.org/pdf/2406.08090) | Data
 
 This repository contains the official implementation of **"From Sim to Real: Toward General Event-based Low-Light Frame Interpolation with Per-scene Optimization"**, presented at **SIGGRAPH Asia 2024**.
 
