@@ -16,7 +16,7 @@ To immediately apply per-scene optimization with pre-trained models, follow thes
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your_username/sim2real_code.git
+   git clone https://github.com/OpenImagingLab/Sim2Real.git
    cd Sim2Real/Sim2Real_code
    ```
 
