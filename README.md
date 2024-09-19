@@ -1,6 +1,16 @@
 # From Sim-to-Real: Toward General Event-based Low-Light Frame Interpolation with Per-scene Optimization
 
-ZIRAN ZHANG, YONGRUI MA, YUETING CHEN, FENG ZHANG, JINWEI GU, TIANFAN XUE, SHI GUO
+[Ziran Zhang](https://naturezhanghn.github.io)<sup>1,2</sup>, 
+[Yongrui Ma](https://scholar.google.com/citations?user=JwQLEocAAAAJ&hl=en)<sup>3,2</sup>, 
+[Yueting Chen](https://scholar.google.com/citations?user=gS-0tfAAAAAJ&hl=en)<sup>1</sup>, 
+Feng Zhang<sup>2</sup>, 
+[Jinwei Gu](https://www.gujinwei.org)<sup>3</sup>, 
+[Tianfan Xue](https://tianfan.info)<sup>3</sup>, 
+[Shi Guo](https://guoshi28.github.io)<sup>2</sup>
+
+
+<sup>1</sup> Zhejiang University, <sup>2</sup> Shanghai AI Laboratory, <sup>3</sup> The Chinese University of Hong Kong
+
 
 [Project Page](https://openimaginglab.github.io/Sim2Real/) | [Video](https://www.youtube.com/watch?v=PiYEh_zcG88) | [Paper](https://arxiv.org/pdf/2406.08090) | [Data](https://opendatalab.com/ziranzhang/EVFI-LL) | [Weights](https://drive.google.com/drive/folders/1sugfKHUswxqUNQKit1G5W8dF1rAKijxq?usp=drive_link)
 
