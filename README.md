@@ -21,7 +21,7 @@ To immediately apply per-scene optimization with pre-trained models, follow thes
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/your_username/sim2real_code.git
-   cd sim2real_code
+   cd Sim2Real/Sim2Real_code
    ```
 
 2. **Download and place the required weights**:
