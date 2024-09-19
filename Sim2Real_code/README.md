@@ -4,7 +4,7 @@ This repository contains the official implementation of the paper **"From Sim to
 
 Our method introduces a **per-scene optimization strategy** tailored for **Video Frame Interpolation (VFI)** under low-light conditions, leveraging event-based cameras. This approach adapts a pre-trained model to scene-specific lighting and camera settings, mitigating artifacts and improving interpolation quality.
 
-![Visual Comparison](static/images/teaser.png)
+![Visual Comparison](Sim2Real_code/image.png)
 
 ## Key Features
 
