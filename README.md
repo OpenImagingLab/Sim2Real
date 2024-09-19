@@ -1,96 +1,92 @@
+To reflect the dual licensing scenario, where the website content you downloaded is licensed under Creative Commons, and your own code should have a separate, appropriate license, here is a refined version of the README that handles both aspects.
+
+---
+
 # Sim2Real: Per-Scene Optimization for Event-based Low-Light Frame Interpolation
 
-This repository contains the official implementation of the paper **"From Sim to Real: Toward General Event-based Low-Light Frame Interpolation with Per-scene Optimization"**, presented at **SIGGRAPH Asia 2024**.
+This repository contains the official implementation of **"From Sim to Real: Toward General Event-based Low-Light Frame Interpolation with Per-scene Optimization"**, presented at **SIGGRAPH Asia 2024**.
 
-Our method introduces a **per-scene optimization strategy** tailored for **Video Frame Interpolation (VFI)** under low-light conditions, leveraging event-based cameras. This approach adapts a pre-trained model to scene-specific lighting and camera settings, mitigating artifacts and improving interpolation quality.
-
-![Visual Comparison](Sim2Real_code/image.png)
+Our approach leverages **event cameras** and focuses on enhancing **Video Frame Interpolation (VFI)** in challenging **low-light conditions** by utilizing a **per-scene optimization** strategy. This method adapts the model to specific lighting and camera settings, addressing the trailing artifacts and signal degradation commonly seen in low-light scenarios.
 
 ## Key Features
 
-- **Per-Scene Optimization**: Fine-tunes a pre-trained model for each scene, significantly enhancing interpolation quality.
-- **Low-light Event Correction**: Resolves trailing artifacts and signal latency caused by low-light conditions.
-- **EVFI-LL Dataset**: Includes RGB+Event sequences captured in low-light environments, providing a new benchmark.
+- **Per-Scene Optimization**: Fine-tunes a pre-trained model for each scene, significantly improving interpolation results under varying lighting conditions.
+- **Low-light Event Correction**: Effectively corrects event-based signal latency and noise in low-light conditions.
+- **EVFI-LL Dataset**: Provides RGB+Event sequences captured in low-light conditions for benchmarking.
 
 ## Quick Start: Per-Scene Optimization
 
-1. Clone the repository:
+To immediately apply per-scene optimization with pre-trained models, follow these steps:
+
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/your_username/sim2real_code.git
    cd sim2real_code
    ```
 
-2. Download the necessary pre-trained weights and place them in the following directories:
+2. **Download and place the required weights**:
    - **Main model weights**: Place in `pretrained_weights/`
    - **DISTS loss function weights**: Place in `losses/DISTS/weights/`
 
-   **[Download Link Placeholder for Weights](your_download_link_here)**
+   **[Download Weights Link Placeholder](your_download_link_here)**
 
-3. Install the dependencies:
+3. **Install the required dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
 
-4. Run per-scene optimization:
+4. **Run per-scene optimization**:
    ```bash
    bash perscene.sh
    ```
 
-This will fine-tune the pre-trained model on your data and perform frame interpolation optimized for each scene.
+The above steps will allow you to fine-tune the pre-trained model on specific scenes and perform frame interpolation optimized for each setting.
 
 ## Optional: Pretraining the Model
 
-If you wish to pretrain the model from scratch using simulated data, you can do so by following these additional steps:
+If you wish to pretrain the model from scratch using simulated data:
 
-1. Pretrain the model:
+1. **Pretrain the model**:
    ```bash
    bash pretrain.sh
    ```
 
-2. After pretraining, proceed with the per-scene optimization as described above.
+2. After pretraining, you can proceed with **per-scene optimization** as described above.
 
-## Repository Structure
+## Directory Structure
 
-- `dataset/`: Utilities for loading and processing the EVFI-LL dataset.
-- `losses/`: Custom loss functions and weights.
-- `models/`: Core neural networks for event-based VFI.
-- `params/`: Configuration files for different training setups.
-- `tools/`: Utility scripts for visualization and debugging.
-- `pretrained_weights/`: Pretrained models ready for per-scene optimization.
-- `run_network.py`: The main script for training and inference.
-- `pretrain.sh`: Script to pretrain the model.
+- `dataset/`: Code and utilities for dataset preparation and loading.
+- `losses/`: Custom loss functions and weights for training.
+- `models/`: Neural network models for Sim2Real frame interpolation tasks.
+- `params/`: Configuration files for training and evaluation settings.
+- `tools/`: Utility scripts for preprocessing and postprocessing tasks.
+- `pretrained_weights/`: Place for storing pretrained models.
+- `run_network.py`: Main script for training and evaluation.
+- `pretrain.sh`: Script for model pretraining.
 - `perscene.sh`: Script for per-scene optimization.
-- `requirements.txt`: Required dependencies.
+- `requirements.txt`: Required Python dependencies.
 
-## Benchmarking with EVFI-LL
+## EVFI-LL Dataset
 
-The `EVFI-LL` dataset, captured under low-light conditions, is available [here](dataset_link). Please set up the dataset in the `dataset/` folder before running any scripts.
+The **EVFI-LL** dataset consists of RGB+Event sequences captured in low-light conditions, providing a challenging benchmark for evaluating event-based VFI performance. Download and place the dataset in the `dataset/` directory.
 
-## Results
+## License Information
 
-Our model achieves state-of-the-art performance on the EVFI-LL dataset, outperforming existing methods such as RIFE and TimeLens:
+### Website License
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />The website content used in this project is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 
-| Method            | PSNR ↑   | SSIM ↑   | LPIPS ↓  |
-|-------------------|----------|----------|----------|
-| RIFE              | 31.143   | 0.8846   | 0.1420   |
-| TimeLens          | 30.548   | 0.8673   | 0.1691   |
-| **Ours (Optimized)** | **32.762** | **0.8972** | **0.1172** |
+### Code License
+The code in this repository is licensed under the MIT License. See `LICENSE` for more details.
 
 ## Citation
 
-If you use this code, please cite our paper:
+If you find this work useful in your research, please cite:
+
 ```bibtex
-@inproceedings{Sim2Real2024,
-  title={From Sim to Real: Toward General Event-based Low-light Frame Interpolation with Per-scene Optimization},
-  author={Anonymous},
-  booktitle={SIGGRAPH Asia},
+@article{zhang2024sim,
+  title={From Sim-to-Real: Toward General Event-based Low-light Frame Interpolation with Per-scene Optimization},
+  author={Zhang, Ziran and Ma, Yongrui and Chen, Yueting and Zhang, Feng and Gu, Jinwei and Xue, Tianfan and Guo, Shi},
+  journal={arXiv preprint arXiv:2406.08090},
   year={2024}
 }
 ```
-
-## License
-
-This repository is released under the MIT License. See `LICENSE` for more details.
-
----
-
