@@ -94,4 +94,3 @@ This repository is released under the MIT License. See `LICENSE` for more detail
 
 ---
 
-Once you have the download links for the weights, you can replace the placeholder with the actual URL. Let me know if you'd like any further adjustments!
