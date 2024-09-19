@@ -1,7 +1,3 @@
-To reflect the dual licensing scenario, where the website content you downloaded is licensed under Creative Commons, and your own code should have a separate, appropriate license, here is a refined version of the README that handles both aspects.
-
----
-
 # Sim2Real: Per-Scene Optimization for Event-based Low-Light Frame Interpolation
 
 This repository contains the official implementation of **"From Sim to Real: Toward General Event-based Low-Light Frame Interpolation with Per-scene Optimization"**, presented at **SIGGRAPH Asia 2024**.
