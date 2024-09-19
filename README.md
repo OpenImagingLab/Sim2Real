@@ -25,7 +25,7 @@ To immediately apply per-scene optimization with pre-trained models, follow thes
    - **Main model weights**: Place in `pretrained_weights/`
    - **DISTS loss function weights**: Place in `losses/DISTS/weights/`
 
-   **[Download Weights Link Placeholder](your_download_link_here)**
+   **[Download Weights Link](https://drive.google.com/drive/folders/1sugfKHUswxqUNQKit1G5W8dF1rAKijxq?usp=drive_link)**
 
 3. **Install the required dependencies**:
    ```bash
