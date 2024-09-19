@@ -7,7 +7,7 @@ To reflect the dual licensing scenario, where the website content you downloaded
 This repository contains the official implementation of **"From Sim to Real: Toward General Event-based Low-Light Frame Interpolation with Per-scene Optimization"**, presented at **SIGGRAPH Asia 2024**.
 
 Our approach leverages **event cameras** and focuses on enhancing **Video Frame Interpolation (VFI)** in challenging **low-light conditions** by utilizing a **per-scene optimization** strategy. This method adapts the model to specific lighting and camera settings, addressing the trailing artifacts and signal degradation commonly seen in low-light scenarios.
-
+![Visual Comparison](Sim2Real_code/image.png)
 ## Key Features
 
 - **Per-Scene Optimization**: Fine-tunes a pre-trained model for each scene, significantly improving interpolation results under varying lighting conditions.
