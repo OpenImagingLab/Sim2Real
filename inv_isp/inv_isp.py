@@ -28,7 +28,7 @@ def process_image(image_path, shot_noise, read_noise, rgb2cam ,rgb_gain, red_gai
 
 
 input_path = '/mnt/dataset/GOPRO/RGB_Dense/'
-output_path = '/mnt/dataset/Gopro/Dense_inv_isp/'
+output_path = '/mnt/dataset/GOPRO/Dense_inv_isp/'
 
 def process_images_in_folder(image_paths):
     shot_noise, read_noise = unprocess.random_noise_levels(min_shot=0.001, max_shot=0.012, min_read=0.0, max_read=0.26)
