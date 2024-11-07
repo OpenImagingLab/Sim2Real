@@ -1,0 +1,9 @@
+natsort==8.4.0
+easydict
+pyiqa
+timm>=0.9.7
+pai-easycv 
+flow_vis
+click
+dists_pytorch
+numpy==1.25
