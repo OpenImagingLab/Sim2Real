@@ -100,7 +100,7 @@ bash pretrain.sh
 This section outlines the steps for preparing the simulated data:
 
 1. **Frame Interpolation with RIFE**  
-   First, use [**RIFE**](https://github.com/hzwer/ECCV2022-RIFE) to perform **8x frame interpolation** on [the GoPro dataset](https://seungjunnah.github.io/Datasets/gopro).
+   First, use [**RIFE**](https://github.com/hzwer/ECCV2022-RIFE) to perform **8x frame interpolation** on [the GoPro dataset](http://openaccess.thecvf.com/content_cvpr_2017/html/Nah_Deep_Multi-Scale_Convolutional_CVPR_2017_paper.html).
 
 2. **Converting RGB Frames to RAW Domain**  
    Next, use [**inv_isp**](https://github.com/OpenImagingLab/Sim2Real/tree/main/inv_isp) to convert the dense **RGB frames** to the **RAW domain**.  
