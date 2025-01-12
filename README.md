@@ -93,6 +93,17 @@ bash pretrain.sh
 
 ---
 
+---
+
+## 📂 Simulated Data Preparation
+
+First, use RIFE to perform 8x frame interpolation on the GoPro Dataset.  
+Next, use `inv_isp` to convert the dense RGB frames to the RAW domain (modify `inv_isp.py`, set the appropriate paths, and run the script).  
+Finally, use the `v2e_idslpf` simulator to generate simulated event signals (make sure to modify `v2e_idslpf/config/GOPRO_config.py`, set the correct paths).  
+
+---
+
+
 ## 📊 EVFI-LL Dataset
 
 The **EVFI-LL** dataset includes RGB+Event sequences captured under low-light conditions, offering a challenging benchmark for evaluating event-based VFI performance. Download and place the dataset in the `dataset/` directory.
