@@ -97,9 +97,22 @@ bash pretrain.sh
 
 ## 📂 Simulated Data Preparation
 
-First, use RIFE to perform 8x frame interpolation on the GoPro Dataset.  
-Next, use `inv_isp` to convert the dense RGB frames to the RAW domain (modify `inv_isp.py`, set the appropriate paths, and run the script).  
-Finally, use the `v2e_idslpf` simulator to generate simulated event signals (make sure to modify `v2e_idslpf/config/GOPRO_config.py`, set the correct paths).  
+This section outlines the steps for preparing the simulated data:
+
+1. **Frame Interpolation with RIFE**  
+   First, use [**RIFE**](https://github.com/hzwer/ECCV2022-RIFE) to perform **8x frame interpolation** on [the GoPro dataset](https://seungjunnah.github.io/Datasets/gopro).
+
+2. **Converting RGB Frames to RAW Domain**  
+   Next, use [**inv_isp**](https://github.com/OpenImagingLab/Sim2Real/tree/main/inv_isp) to convert the dense **RGB frames** to the **RAW domain**.  
+   - Modify the `inv_isp.py` script.  
+   - Set the appropriate paths in the script.  
+   - Run the script to process the data.
+
+3. **Generating Simulated Event Signals**  
+   Finally, use the [**v2e_idslpf**](https://github.com/OpenImagingLab/Sim2Real/tree/main/v2e_idslpf) simulator to generate the simulated **event signals**.  
+   - Modify the `v2e_idslpf/config/GOPRO_config.py` configuration file.  
+   - Set the correct paths for the dataset and parameters.  
+   - Run the simulator to generate the event data.
 
 ---
 
