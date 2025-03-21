@@ -192,6 +192,8 @@ class BaseModel(Module):
         for n in range(res.shape[1]):
             detailed_record = f'EPOCH {epoch}\tFolder: {data_in["folder"][0]} Image: {data_in["rgb_name"][n]} val num: {n}\t'
             for k in self.validation_metrics.keys():
+                res = res.clamp(0.0, 1.0)
+                gt = gt.clamp(0.0, 1.0)
                 val = self.validation_metrics[k].forward(res[:, n].detach(), gt[:, n].detach()).item()
                 self.metrics_record[f'val_{k}'].append(val)
                 detailed_record += f'{k}: {val:.4f}\t'
