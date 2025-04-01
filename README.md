@@ -48,7 +48,7 @@ cd Sim2Real/Sim2Real_code
 
 [Download Weights Here](https://drive.google.com/file/d/1KjFf3vgxhpS6-RnrYM5ctOUqXVEocvzo/view?usp=sharing)
 
-### 3. Install Python 3.9.19 and dependencies:
+### 3. Install dependencies:
 
 Ensure Python 3.9.19 is installed, then run:
 ```bash
