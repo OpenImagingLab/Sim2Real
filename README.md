@@ -55,16 +55,24 @@ Ensure Python 3.9.19 is installed, then run:
 pip install -r requirements.txt
 ```
 
-### 4. Run per-scene optimization:
+### 4. Run per-scene optimization
 
-Modify the following paths in Sim2Real_code/params/Paths/RealCaptured.py:
-```bash
-RC.train.rgb = "/ailab/user/zhangziran/Dataset/Sim2Real_release"
-RC.train.evs = "/ailab/user/zhangziran/Dataset/Sim2Real_release"
-RC.test.rgb = "/ailab/user/zhangziran/Dataset/Sim2Real_release"
-RC.test.evs = "/ailab/user/zhangziran/Dataset/Sim2Real_release"
-Change them to the actual path where you downloaded your dataset.
----
+To run the per-scene optimization, follow these steps:
+
+1. **Modify the paths in the configuration file:**
+
+   Open the `Sim2Real_code/params/Paths/RealCaptured.py` file and update the paths to point to the actual location where you have downloaded your dataset. Modify the following lines:
+
+   ```python
+   RC.train.rgb = "/ailab/user/zhangziran/Dataset/Sim2Real_release"
+   RC.train.evs = "/ailab/user/zhangziran/Dataset/Sim2Real_release"
+   RC.test.rgb = "/ailab/user/zhangziran/Dataset/Sim2Real_release"
+   RC.test.evs = "/ailab/user/zhangziran/Dataset/Sim2Real_release"
+Change them to the correct path on your system.
+
+Run the optimization script:
+
+After modifying the paths, execute the following command to start the per-scene optimization process:
 
 ```bash
 bash perscene.sh
