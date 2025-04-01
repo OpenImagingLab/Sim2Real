@@ -59,7 +59,7 @@ pip install -r requirements.txt
 
 To run the per-scene optimization, follow these steps:
 
-1. **Modify the paths in the configuration file:**
+**Modify the paths in the configuration file:**
 
    Open the `Sim2Real_code/params/Paths/RealCaptured.py` file and update the paths to point to the actual location where you have downloaded your dataset. Modify the following lines:
 
@@ -68,9 +68,10 @@ To run the per-scene optimization, follow these steps:
    RC.train.evs = "/ailab/user/zhangziran/Dataset/Sim2Real_release"
    RC.test.rgb = "/ailab/user/zhangziran/Dataset/Sim2Real_release"
    RC.test.evs = "/ailab/user/zhangziran/Dataset/Sim2Real_release"
+   ```
 Change them to the correct path on your system.
 
-Run the optimization script:
+**Run the optimization script:**
 
 After modifying the paths, execute the following command to start the per-scene optimization process:
 
