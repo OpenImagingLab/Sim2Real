@@ -58,10 +58,12 @@ pip install -r requirements.txt
 ### 4. Run per-scene optimization:
 
 Modify the following paths in Sim2Real_code/params/Paths/RealCaptured.py:
+---
 RC.train.rgb = "/ailab/user/zhangziran/Dataset/Sim2Real_release"
 RC.train.evs = "/ailab/user/zhangziran/Dataset/Sim2Real_release"
 RC.test.rgb = "/ailab/user/zhangziran/Dataset/Sim2Real_release"
 RC.test.evs = "/ailab/user/zhangziran/Dataset/Sim2Real_release"
+---
 Change them to the actual path where you downloaded your dataset.
 
 ```bash
