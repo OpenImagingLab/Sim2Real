@@ -1,10 +1,5 @@
 #!/bin/bash
 ###### Skip x2 supervision ##### 
-module load anaconda/2022.10
-module load cuda/11.8
-source activate torch
-export PYTHONUNBUFFERED=1
-
 start_time=$(date +%s)
 MODEL_NAME1="TimeLens"
 PARAM_NAME1="timelens_RC_x8_lpips_datav2_selftuning_x2" 
