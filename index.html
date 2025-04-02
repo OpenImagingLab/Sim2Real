@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="description" content="Toward General Event-based Low-light Frame Interpolation with Per-scene Optimization.">
@@ -163,17 +163,46 @@
     
     .presentation-container {
       width: 100%;
-      height: 600px;
+      max-width: 800px;
       margin: 2rem auto;
+      background-color: #fff;
       border-radius: 8px;
-      overflow: hidden;
       box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      padding: 2rem;
+      text-align: center;
     }
     
-    .presentation-container iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
+    .presentation-icon {
+      font-size: 48px;
+      color: #f4b400;
+      margin-bottom: 1rem;
+    }
+    
+    .presentation-message {
+      font-size: 1.2rem;
+      color: #555;
+      margin: 1.5rem 0;
+    }
+    
+    .download-button {
+      display: inline-block;
+      background-color: #4285f4;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      margin-top: 1rem;
+    }
+    
+    .download-button:hover {
+      background-color: #3367d6;
+      color: white;
+    }
+    
+    .download-icon {
+      margin-right: 0.5rem;
     }
     
     @media screen and (max-width: 768px) {
@@ -182,7 +211,7 @@
       }
       
       .presentation-container {
-        height: 400px;
+        padding: 1.5rem;
       }
       
       .title.is-3, .title.is-3.5 {
@@ -192,26 +221,6 @@
       .publication-authors {
         font-size: 0.9rem !important;
       }
-    }
-    
-    .ppt-embed-container {
-      position: relative;
-      width: 100%;
-      height: 0;
-      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-      margin: 2rem 0;
-      overflow: hidden;
-      border-radius: 8px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    }
-    
-    .ppt-embed-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
     }
     
     .dnerf {
@@ -226,7 +235,7 @@
   
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // 处理导航栏的移动端响应式菜单
+      // Handle mobile responsive menu
       const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
       if ($navbarBurgers.length > 0) {
         $navbarBurgers.forEach(el => {
@@ -239,7 +248,7 @@
         });
       }
       
-      // 初始化轮播（如果有的话）
+      // Initialize carousel (if any)
       if (typeof bulmaCarousel !== 'undefined') {
         bulmaCarousel.attach('#results-carousel', {
           slidesToScroll: 1,
@@ -249,7 +258,7 @@
         });
       }
       
-      // 平滑滚动到锚点
+      // Smooth scroll to anchors
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
           e.preventDefault();
@@ -280,16 +289,16 @@
           </span>
         </a>
         <a class="navbar-item" href="#abstract">
-          摘要
+          Abstract
         </a>
         <a class="navbar-item" href="#video">
-          视频
+          Video
         </a>
         <a class="navbar-item" href="#presentation">
-          演示文稿
+          Presentation
         </a>
         <a class="navbar-item" href="#BibTeX">
-          引用
+          Citation
         </a>
       </div>
     </div>
@@ -442,23 +451,20 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Sim2Real Presentation</h2>
     
-    <!-- 直接嵌入Google幻灯片方式 -->
-    <div class="ppt-embed-container">
-      <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRQ8whRdYX_cMUiVZC3YbGKPKV2wXUNRpFtS7sTW95EnWOqZV2RO9Cd7LxeO4z3hKvw5j97dqxBhH7g/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-    </div>
-    
-    <!-- 备选方案：使用Microsoft OneDrive嵌入 -->
-    <div class="ppt-embed-container" style="display:none;">
-      <iframe src="https://onedrive.live.com/embed?cid=YOUR_FILE_ID&resid=YOUR_RESID&authkey=YOUR_AUTHKEY&em=2" frameborder="0" scrolling="no"></iframe>
-    </div>
-    
-    <!-- 下载链接作为备用 -->
-    <div class="has-text-centered" style="margin-top: 1rem;">
-      <a href="https://drive.google.com/file/d/1SeK-Eqm5uMR7XllgQCTRWLRHLh1d2fJC/view?usp=sharing" class="button is-link is-outlined" target="_blank">
-        <span class="icon">
+    <!-- Presentation container with fallback -->
+    <div class="presentation-container">
+      <div class="presentation-icon">
+        <i class="fas fa-file-powerpoint"></i>
+      </div>
+      <h3 class="title is-4">Presentation Slides</h3>
+      <p class="presentation-message">
+        The presentation is available for download. The slides contain detailed information about our methodology, experiments, and results.
+      </p>
+      <a href="https://drive.google.com/file/d/1SeK-Eqm5uMR7XllgQCTRWLRHLh1d2fJC/view?usp=sharing" class="download-button" target="_blank">
+        <span class="download-icon">
           <i class="fas fa-download"></i>
         </span>
-        <span>下载幻灯片</span>
+        Download Slides
       </a>
     </div>
   </div>
