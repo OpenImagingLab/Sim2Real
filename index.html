@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="Toward General Event-based Low-light Frame Interpolation with Per-scene Optimization.">
+  <meta name="description" content="Toward General Event-based Low-light Frame Interpolation with Per-scene Optimization.">
   <meta name="keywords" content="Event Camera, Video Frame Interpolation, Low Light, Per-scene Optimization">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>From Sim-to-Real: Toward General Event-based Low-light Frame Interpolation with Per-scene Optimization</title>
@@ -12,56 +11,290 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
     function gtag() {
       dataLayer.push(arguments);
     }
-
     gtag('js', new Date());
-
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
-
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-slider@2.0.5/dist/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  
+  <style>
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    
+    .navbar {
+      background-color: #f9f9f9;
+      box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
+    }
+    
+    .title.is-3, .title.is-3.5 {
+      font-family: 'Google Sans', sans-serif;
+      font-weight: 700;
+      color: #2c3e50;
+    }
+    
+    .publication-title {
+      margin-bottom: 1.5rem;
+    }
+    
+    .author-block {
+      margin-right: 10px;
+      display: inline-block;
+    }
+    
+    .author-block a {
+      color: #3273dc;
+      transition: color 0.2s ease;
+    }
+    
+    .author-block a:hover {
+      color: #1c4587;
+      text-decoration: underline;
+    }
+    
+    .author-note {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+    
+    .publication-links {
+      margin: 1.5rem 0;
+    }
+    
+    .link-block {
+      display: inline-block;
+      margin: 0.5rem;
+    }
+    
+    .external-link.button {
+      transition: all 0.3s ease;
+    }
+    
+    .external-link.button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .hero.teaser {
+      background-color: #f6f9fc;
+      padding: 2rem 0;
+      position: relative;
+    }
+    
+    .hero-body {
+      padding: 2rem 1.5rem;
+    }
+    
+    #teaser {
+      width: 100%;
+      max-width: 800px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    
+    .subtitle {
+      margin-top: 1.5rem;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+    
+    .section {
+      padding: 3rem 1.5rem;
+    }
+    
+    .content p {
+      line-height: 1.7;
+    }
+    
+    .publication-video {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    
+    .publication-video video {
+      width: 100%;
+      display: block;
+    }
+    
+    pre {
+      background-color: #f5f5f5;
+      border-radius: 5px;
+      padding: 1rem;
+      overflow-x: auto;
+    }
+    
+    .footer {
+      background-color: #2c3e50;
+      color: #f9f9f9;
+      padding: 3rem 1.5rem 6rem;
+    }
+    
+    .footer a {
+      color: #9cc7ff;
+    }
+    
+    .footer a:hover {
+      color: #fff;
+    }
+    
+    .icon-link {
+      font-size: 1.5rem;
+      margin: 0 0.5rem;
+      color: #f9f9f9;
+    }
+    
+    .presentation-container {
+      width: 100%;
+      height: 600px;
+      margin: 2rem auto;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    
+    .presentation-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .hero-body {
+        padding: 2rem 1rem;
+      }
+      
+      .presentation-container {
+        height: 400px;
+      }
+      
+      .title.is-3, .title.is-3.5 {
+        font-size: 1.5rem;
+      }
+      
+      .publication-authors {
+        font-size: 0.9rem !important;
+      }
+    }
+    
+    .ppt-embed-container {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      margin: 2rem 0;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    
+    .ppt-embed-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
+    .dnerf {
+      font-weight: bold;
+      color: #3273dc;
+    }
+  </style>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/js/bulma-carousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bulma-slider@2.0.5/dist/js/bulma-slider.min.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 处理导航栏的移动端响应式菜单
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      if ($navbarBurgers.length > 0) {
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+          });
+        });
+      }
+      
+      // 初始化轮播（如果有的话）
+      if (typeof bulmaCarousel !== 'undefined') {
+        bulmaCarousel.attach('#results-carousel', {
+          slidesToScroll: 1,
+          slidesToShow: 1,
+          infinite: true,
+          autoplay: true
+        });
+      }
+      
+      // 平滑滚动到锚点
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    });
+  </script>
 </head>
 <body>
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://naturezhanghn.github.io">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
+  <div class="container">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </a>
     </div>
-
+    <div id="navMenu" class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://naturezhanghn.github.io">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+        <a class="navbar-item" href="#abstract">
+          摘要
+        </a>
+        <a class="navbar-item" href="#video">
+          视频
+        </a>
+        <a class="navbar-item" href="#presentation">
+          演示文稿
+        </a>
+        <a class="navbar-item" href="#BibTeX">
+          引用
+        </a>
+      </div>
+    </div>
   </div>
 </nav>
-
 
 <section class="hero">
   <div class="hero-body">
@@ -90,8 +323,6 @@
               <a href="https://guoshi28.github.io">Shi Guo</a><sup>2,†</sup>
             </span>
           </div>
-
-          
           
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Zhejiang University,</span>
@@ -100,9 +331,6 @@
           </div>
 
           <p class="author-note">*Authors contributed equally. †Corresponding authors.</p>
-
-
-
 
           <div class="column has-text-centered">
             <div class="publication-links">
@@ -143,7 +371,7 @@
                       <i class="fab fa-github"></i>
                   </span>
                   <span>Code</span>
-                  </a>
+                </a>
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
@@ -153,9 +381,9 @@
                       <i class="far fa-images"></i>
                   </span>
                   <span>Data</span>
-                  </a>
+                </a>
+              </span>
             </div>
-
           </div>
         </div>
       </div>
@@ -163,97 +391,18 @@
   </div>
 </section>
 
-
-
-<!-- <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/images/teaser.png"
-                type="video/mp4">
-      </video>
-      <img id="teaser" src="./static/images/teaser.png" alt="Teaser Image" height="100%">
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
-    </div>
-  </div>
-</section> -->
-
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img id="teaser" src="./static/images/teaser.png" alt="Teaser Image" height="100%">
+      <img id="teaser" src="./static/images/teaser.png" alt="Teaser Image">
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">the interpolated result from the real-captured rgb-event sequence under low light conditions. our proposed per-scene optimization method can successfully correct the impact of event latency, accurately interpolate the correct positions, and produce visually pleasing interpolation results.
+        <span class="dnerf">The interpolated result</span> from the real-captured RGB-event sequence under low light conditions. Our proposed per-scene optimization method can successfully correct the impact of event latency, accurately interpolate the correct positions, and produce visually pleasing interpolation results.
       </h2>
     </div>
   </div>
 </section>
 
-
-<!-- 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
- -->
-
-<section class="section">
+<section class="section" id="abstract">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
@@ -268,7 +417,11 @@
       </div>
     </div>
     <!--/ Abstract. -->
+  </div>
+</section>
 
+<section class="section" id="video">
+  <div class="container is-max-desktop">
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -285,57 +438,70 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="presentation">
   <div class="container is-max-desktop">
-    <h2 class="title is-3">Sim2Real Presentation</h2>
-    <iframe src="https://drive.google.com/file/d/1SeK-Eqm5uMR7XllgQCTRWLRHLh1d2fJC/view?usp=sharing" width="100%" height="600px"></iframe>
+    <h2 class="title is-3 has-text-centered">Sim2Real Presentation</h2>
+    
+    <!-- 直接嵌入Google幻灯片方式 -->
+    <div class="ppt-embed-container">
+      <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRQ8whRdYX_cMUiVZC3YbGKPKV2wXUNRpFtS7sTW95EnWOqZV2RO9Cd7LxeO4z3hKvw5j97dqxBhH7g/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    </div>
+    
+    <!-- 备选方案：使用Microsoft OneDrive嵌入 -->
+    <div class="ppt-embed-container" style="display:none;">
+      <iframe src="https://onedrive.live.com/embed?cid=YOUR_FILE_ID&resid=YOUR_RESID&authkey=YOUR_AUTHKEY&em=2" frameborder="0" scrolling="no"></iframe>
+    </div>
+    
+    <!-- 下载链接作为备用 -->
+    <div class="has-text-centered" style="margin-top: 1rem;">
+      <a href="https://drive.google.com/file/d/1SeK-Eqm5uMR7XllgQCTRWLRHLh1d2fJC/view?usp=sharing" class="button is-link is-outlined" target="_blank">
+        <span class="icon">
+          <i class="fas fa-download"></i>
+        </span>
+        <span>下载幻灯片</span>
+      </a>
+    </div>
   </div>
 </section>
 
-
-
-
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
+    <h2 class="title is-3 has-text-centered">BibTeX</h2>
     <pre><code>@article{zhang2024sim,
   title={From Sim-to-Real: Toward General Event-based Low-light Frame Interpolation with Per-scene Optimization},
   author={Zhang, Ziran and Ma, Yongrui and Chen, Yueting and Zhang, Feng and Gu, Jinwei and Xue, Tianfan and Guo, Shi},
   journal={arXiv preprint arXiv:2406.08090},
   year={2024}
-}
-</code></pre>
+}</code></pre>
   </div>
 </section>
-
 
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link"
-         href="">
+      <a class="icon-link" href="https://dl.acm.org/doi/10.1145/3680528.3687649">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://naturezhanghn.github.io" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/OpenImagingLab/Sim2Real" class="external-link">
         <i class="fab fa-github"></i>
+      </a>
+      <a class="icon-link" href="https://www.youtube.com/watch?v=PiYEh_zcG88">
+        <i class="fab fa-youtube"></i>
       </a>
     </div>
     <div class="columns is-centered">
       <div class="column is-8">
-        <div class="content">
+        <div class="content has-text-centered">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
           <p>
-            You are welcome to use the <a
-              href="https://github.com/yourusername/yourproject">source code</a> of this website for your own projects. We kindly ask that you credit this page in your website's footer. Please ensure to remove any analytics code from the header that you do not wish to use.
+            You are welcome to use the source code of this website for your own projects. We kindly ask that you credit this page in your website's footer. Please ensure to remove any analytics code from the header that you do not wish to use.
           </p>
         </div>
       </div>
     </div>
-
   </div>
 </footer>
 
