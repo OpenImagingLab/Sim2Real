@@ -11,7 +11,7 @@ Feng Zhang<sup>2</sup>,
 
 <sup>1</sup> Zhejiang University, <sup>2</sup> Shanghai AI Laboratory, <sup>3</sup> The Chinese University of Hong Kong
 
-[🌐 Project Page](https://openimaginglab.github.io/Sim2Real/) | [🎥 Video](https://www.youtube.com/watch?v=PiYEh_zcG88) | [📄 Paper](https://arxiv.org/pdf/2406.08090) | [📊 Data](https://opendatalab.com/ziranzhang/EVFI-LL) | [🛠️ Weights](https://drive.google.com/file/d/1KjFf3vgxhpS6-RnrYM5ctOUqXVEocvzo/view?usp=sharing) | [🔖 PPT](https://github.com/OpenImagingLab/Sim2Real/blob/main/PPT.pdf)
+[🌐 Project Page](https://openimaginglab.github.io/Sim2Real/) | [🎥 Video](https://www.youtube.com/watch?v=PiYEh_zcG88) | [📄 Paper](https://arxiv.org/pdf/2406.08090) | [📊 Data](https://opendatalab.com/ziranzhang/EVFI-LL) | [🛠️ Weights](https://drive.google.com/file/d/1Siy9vZjsTNZNVR2LTmFsO00DaL8h1HV1/view?usp=drive_link) | [🔖 PPT](https://github.com/OpenImagingLab/Sim2Real/blob/main/PPT.pdf)
 
 ---
 
@@ -46,7 +46,7 @@ cd Sim2Real/Sim2Real_code
 - **Main model weights**: Place in `pretrained_weights/`
 - **DISTS loss function weights**: Place in `losses/DISTS/weights/`
 
-[Download Weights Here](https://drive.google.com/file/d/1KjFf3vgxhpS6-RnrYM5ctOUqXVEocvzo/view?usp=sharing)
+[Download Weights Here](https://drive.google.com/file/d/1Siy9vZjsTNZNVR2LTmFsO00DaL8h1HV1/view?usp=drive_link)
 
 ### 3. Install dependencies:
 
