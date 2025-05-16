@@ -144,6 +144,15 @@ The **EVFI-LL** dataset includes RGB+Event sequences captured under low-light co
 
 ---
 
+
+## How to Run a Demo Case
+Download demo.zip from this link.
+Extract demo.zip into the data folder.
+Update the path in Sim2Real/params/Paths/RealCaptured.py to point to the /data folder. I realize this was not clearly mentioned before, and I appreciate you catching that.
+In Sim2Real/Sim2Real_code/dataset/RC/dataset_dict.py, keep only "demo" in both dataset_dict and test_key. This step was previously overlooked—thank you for bringing it up.
+Run the code.
+
+
 ## 📜 License Information
 The code in this repository is licensed under the [MIT License](LICENSE).
 
