@@ -152,9 +152,9 @@ The **EVFI-LL** dataset includes RGB+Event sequences captured under low-light co
 
 2. Extract `demo.zip` into the `data` folder.
 
-3. Update the path in `Sim2Real/params/Paths/RealCaptured.py` to point to the `/data` folder. I realize this was not clearly mentioned before, and I appreciate you catching that.
+3. Update the path in `Sim2Real/params/Paths/RealCaptured.py` to point to the `/data` folder. 
 
-4. In `Sim2Real/Sim2Real_code/dataset/RC/dataset_dict.py`, keep only `"demo"` in both `dataset_dict` and `test_key`. This step was previously overlooked—thank you for bringing it up.
+4. In `Sim2Real/Sim2Real_code/dataset/RC/dataset_dict.py`, keep only `"demo"` in both `dataset_dict` and `test_key`. 
 
 5. Run the code.
 
