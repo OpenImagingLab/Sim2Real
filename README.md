@@ -154,9 +154,12 @@ The **EVFI-LL** dataset includes RGB+Event sequences captured under low-light co
 
 3. Update the path in `Sim2Real/params/Paths/RealCaptured.py` to point to the `/data` folder. 
 
-4. In `Sim2Real/Sim2Real_code/dataset/RC/dataset_dict.py`, keep only `"demo"` in both `dataset_dict` and `test_key`. 
-
-5. Run the code.
+4. In `Sim2Real/Sim2Real_code/dataset/RC/dataset_dict.py`, keep only `"demo"` in both `dataset_dict` and `test_key`.
+5. Please modify the save path in Sim2Real/Sim2Real_code/params/RealCaptured.py, and update the number of test cases in perscene.sh by setting:
+```
+for idx in {0..0}
+```
+6. Run the code.
 
 
 ## 📜 License Information
